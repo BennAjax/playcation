@@ -7,7 +7,8 @@
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
-              d="M14.32 12.906l1.096 1.096c.412-.023.83.123 1.145.437l3 3a1.5 1.5 0 01-2.122 2.122l-3-3a1.497 1.497 0 01-.437-1.145l-1.096-1.096a8 8 0 111.414-1.414zM8 14A6 6 0 108 2a6 6 0 000 12z"
+              d="M14.32 12.906l1.096 1.096c.412-.023.83.123 1.145.437l3 3a1.5 1.5 0 01-2.122 2.122l-3-3a1.497 1.497
+               0 01-.437-1.145l-1.096-1.096a8 8 0 111.414-1.414zM8 14A6 6 0 108 2a6 6 0 000 12z"
               fill="#A0AEC0"
             />
           </svg>
@@ -59,88 +60,90 @@
       </button>
     </div>
     <form v-show="isOpen">
-      <fieldset class="px-4 py-4 border-t border-gray-900 sm:flex sm:items-center sm:-mx-2">
-        <div class="flex -mx-2 sm:w-1/2 sm:mx-0">
-          <label class="block w-1/2 px-2">
-            <span class="text-sm font-semibold text-gray-400">Bedrooms</span>
-            <select class="mt-1 block w-full border-transparent rounded-lg bg-gray-700 text-white shadow">
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </label>
-          <label class="block w-1/2 px-2">
-            <span class="text-sm font-semibold text-gray-400">Bathrooms</span>
-            <select class="mt-1 block w-full border-transparent rounded-lg bg-gray-700 text-white shadow">
-              <option>2</option>
-            </select>
-          </label>
-        </div>
+      <div class="lg:flex">
+        <fieldset class="px-4 py-4 border-t border-gray-900 sm:flex sm:items-center sm:-mx-2 lg:w-1/3 lg:flex-wrap lg:border-r">
+          <div class="flex -mx-2 sm:w-1/2 sm:mx-0 lg:w-full">
+            <label class="block w-1/2 px-2">
+              <span class="text-sm font-semibold text-gray-400">Bedrooms</span>
+              <select class="mt-1 block w-full border-transparent rounded-lg bg-gray-700 text-white shadow">
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </label>
+            <label class="block w-1/2 px-2">
+              <span class="text-sm font-semibold text-gray-400">Bathrooms</span>
+              <select class="mt-1 block w-full border-transparent rounded-lg bg-gray-700 text-white shadow">
+                <option>2</option>
+              </select>
+            </label>
+          </div>
 
-        <div class="mt-4 flex sm:w-1/2 sm:mx-0 sm:px-2 sm:mt-0">
-          <label class="block w-full">
-            <span class="text-sm font-semibold text-gray-400">Price Range</span>
-            <select class="mt-1 block w-full border-transparent rounded-lg bg-gray-700 text-white shadow">
-              <option>Up to $2000/wk</option>
-            </select>
-          </label>
-        </div>
-      </fieldset>
-      <fieldset class="px-4 py-4 border-t border-gray-900">
-        <span class="block text-sm font-semibold text-gray-400"> Property Type </span>
-        <div class="sm:flex sm:justify-between sm:w-5/6">
-          <label class="mt-3 flex items-center">
-            <input class="bg-gray-900 border-transparent text-indigo-500" type="radio" name="propertyType" value="house" />
-            <span class="ml-2 text-white">House</span>
-          </label>
-          <label class="mt-3 flex items-center">
-            <input class="bg-gray-900 border-transparent text-indigo-500" type="radio" name="propertyType" value="house" />
-            <span class="ml-2 text-white">Apartment</span>
-          </label>
-          <label class="mt-3 flex items-center">
-            <input class="bg-gray-900 border-transparent text-indigo-500" type="radio" name="propertyType" value="house" />
-            <span class="ml-2 text-white">Loft</span>
-          </label>
-          <label class="mt-3 flex items-center">
-            <input class="bg-gray-900 border-transparent text-indigo-500" type="radio" name="propertyType" value="house" />
-            <span class="ml-2 text-white">Townhouse</span>
-          </label>
-        </div>
-      </fieldset>
-      <fieldset class="px-4 py-4 border-t border-gray-900">
-        <span class="block text-sm font-semibold text-gray-400">Amenities</span>
-        <div class="sm:flex sm:flex-wrap sm:-mx-2">
-          <label class="mt-3 flex items-center sm:w-1/4 sm:px-2">
-            <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="balcony" />
-            <span class="ml-2 text-white">Balcony</span>
-          </label>
-          <label class="mt-3 flex items-center sm:w-1/4 sm:px-2">
-            <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="parking" />
-            <span class="ml-2 text-white">Kid friendly</span>
-          </label>
-          <label class="mt-3 flex items-center sm:w-1/4 sm:px-2">
-            <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="pool" />
-            <span class="ml-2 text-white">Pool</span>
-          </label>
-          <label class="mt-3 flex items-center sm:w-1/4 sm:px-2">
-            <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="beach" />
-            <span class="ml-2 text-white">Beach</span>
-          </label>
-          <label class="mt-3 flex items-center sm:w-1/4 sm:px-2">
-            <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="petFriendly" />
-            <span class="ml-2 text-white">Pet friendly</span>
-          </label>
+          <div class="mt-4 flex sm:w-1/2 sm:mx-0 sm:px-2 sm:mt-0 lg:w-full">
+            <label class="block w-full">
+              <span class="text-sm font-semibold text-gray-400">Price Range</span>
+              <select class="mt-1 block w-full border-transparent rounded-lg bg-gray-700 text-white shadow">
+                <option>Up to $2000/wk</option>
+              </select>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="px-4 py-4 border-t border-gray-900 lg:w-1/3 lg:border-r">
+          <span class="block text-sm font-semibold text-gray-400"> Property Type </span>
+          <div class="sm:flex sm:justify-between sm:w-5/6 lg:block">
+            <label class="mt-3 flex items-center">
+              <input class="bg-gray-900 border-transparent text-indigo-500" type="radio" name="propertyType" value="house" />
+              <span class="ml-2 text-white">House</span>
+            </label>
+            <label class="mt-3 flex items-center">
+              <input class="bg-gray-900 border-transparent text-indigo-500" type="radio" name="propertyType" value="house" />
+              <span class="ml-2 text-white">Apartment</span>
+            </label>
+            <label class="mt-3 flex items-center">
+              <input class="bg-gray-900 border-transparent text-indigo-500" type="radio" name="propertyType" value="house" />
+              <span class="ml-2 text-white">Loft</span>
+            </label>
+            <label class="mt-3 flex items-center">
+              <input class="bg-gray-900 border-transparent text-indigo-500" type="radio" name="propertyType" value="house" />
+              <span class="ml-2 text-white">Townhouse</span>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="px-4 py-4 border-t border-gray-900 lg:w-1/3">
+          <span class="block text-sm font-semibold text-gray-400">Amenities</span>
+          <div class="sm:flex sm:flex-wrap sm:-mx-2 ">
+            <label class="mt-3 flex items-center sm:w-1/4 sm:px-2 lg:w-1/2">
+              <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="balcony" />
+              <span class="ml-2 text-white">Balcony</span>
+            </label>
+            <label class="mt-3 flex items-center sm:w-1/4 sm:px-2 lg:w-1/2">
+              <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="parking" />
+              <span class="ml-2 text-white">Kid friendly</span>
+            </label>
+            <label class="mt-3 flex items-center sm:w-1/4 sm:px-2 lg:w-1/2">
+              <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="pool" />
+              <span class="ml-2 text-white">Pool</span>
+            </label>
+            <label class="mt-3 flex items-center sm:w-1/4 sm:px-2 lg:w-1/2">
+              <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="beach" />
+              <span class="ml-2 text-white">Beach</span>
+            </label>
+            <label class="mt-3 flex items-center sm:w-1/4 sm:px-2 lg:w-1/2">
+              <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="petFriendly" />
+              <span class="ml-2 text-white">Pet friendly</span>
+            </label>
 
-          <label class="mt-3 flex items-center sm:w-1/4 sm:px-2">
-            <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="airConditioning" />
-            <span class="ml-2 text-white">Parking</span>
-          </label>
+            <label class="mt-3 flex items-center sm:w-1/4 sm:px-2 lg:w-1/2">
+              <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="airConditioning" />
+              <span class="ml-2 text-white">Parking</span>
+            </label>
 
-          <label class="mt-3 flex items-center sm:w-1/4 sm:px-2">
-            <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="airConditioning" />
-            <span class="ml-2 text-white">Air conditioning</span>
-          </label>
-        </div>
-      </fieldset>
+            <label class="mt-3 flex items-center sm:w-1/4 sm:px-2 lg:w-1/2">
+              <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="airConditioning" />
+              <span class="ml-2 text-white">Air conditioning</span>
+            </label>
+          </div>
+        </fieldset>
+      </div>
       <div class="bg-gray-900 px-4 py-4">
         <button
           type="button"

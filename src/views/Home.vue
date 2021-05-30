@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-teal antialiased">
+  <div class="min-h-screen bg-teal antialiased">
     <site-header></site-header>
     <search-filters></search-filters>
     <main class="px-3 py-6 space-y-2">
