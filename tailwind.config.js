@@ -30,17 +30,15 @@ module.exports = {
         "9/12": "75%",
         "10/12": "83.333333%",
         "11/12": "91.666667%",
-        full: "100%"
+        full: "100%",
       },
       backgroundColor: {
-        teal: "#EDF2F7"
-      }
+        teal: "#EDF2F7",
+      },
     },
   },
   variants: {
-    extend: {},
+    scrollbar: ["rounded"],
   },
-  plugins: [
-    require('@tailwindcss/forms')
-  ],
+  plugins: [require("@tailwindcss/forms"), require("tailwind-scrollbar")],
 };

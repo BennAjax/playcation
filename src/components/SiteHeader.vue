@@ -1,13 +1,8 @@
 <template>
-  <header class="bg-gray-900">
+  <header class="bg-gray-900 sm:flex sm:items-center sm:justify-between">
     <div class="flex justify-between items-end px-4 py-3">
       <div>
-        <svg
-          class="h-7 w-auto"
-          viewBox="0 0 185 32"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg class="h-7 w-auto" viewBox="0 0 185 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M60.064 27h3.768l3.144-11.088L70.144 27h3.768l4.704-16.8h-3.48L71.92 22.656 68.392 10.2H65.56l-3.504 12.456L58.84 10.2h-3.48L60.064 27zm24.61.336c3.529 0 6.36-2.76 6.36-6.336 0-3.576-2.831-6.336-6.36-6.336-3.527 0-6.335 2.76-6.335 6.336 0 3.576 2.808 6.336 6.336 6.336zm0-3.024c-1.823 0-3.24-1.368-3.24-3.312 0-1.944 1.417-3.312 3.24-3.312 1.849 0 3.265 1.368 3.265 3.312 0 1.944-1.416 3.312-3.264 3.312zm11.635-7.248V15h-3.096v12h3.096v-5.736c0-2.52 2.04-3.24 3.648-3.048V14.76c-1.512 0-3.024.672-3.648 2.304zM112.832 27l-4.968-6.072L112.688 15h-3.696l-4.128 5.28V10.2h-3.096V27h3.096v-5.448L109.232 27h3.6z"
             fill="#fff"
@@ -28,14 +23,7 @@
         <button
           @click="toggle"
           type="button"
-          class="
-            px-2
-            text-gray-500
-            hover:text-white
-            focus:outline-none
-            focus:text-white
-            sm:hidden
-          "
+          class="px-2 text-gray-500 hover:text-white focus:outline-none focus:text-white sm:hidden"
         >
           <svg
             v-if="!isOpen"
@@ -45,12 +33,7 @@
             viewBox="0 0 24 24"
             stroke="currentColor"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
           <svg
             v-else
@@ -60,82 +43,42 @@
             viewBox="0 0 24 24"
             stroke="currentColor"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
     </div>
-    <nav class="sm:block" :class="{ hidden: !isOpen, block: isOpen }">
-      <div class="px-4 pt-3 pb-5 border-b border-gray-800">
-        <router-link
-          to="#"
-          class="
-            block
-            px-2
-            py-1
-            rounded
-            font-semibold
-            text-white
-            hover:bg-gray-800
-          "
-        >
+    <nav class="sm:flex sm:items-center sm:mt-1 md:mt-0" :class="{ hidden: !isOpen, block: isOpen }">
+      <div class="px-4 pt-3 pb-5 border-b border-gray-800 sm:flex sm:border-b-0 sm:py-0 sm:pr-0">
+        <router-link to="#" class="block px-2 py-1 rounded font-semibold text-white hover:bg-gray-800 sm:text-sm sm:font-normal">
           List your property
         </router-link>
         <router-link
           to="#"
-          class="
-            mt-2
-            block
-            px-2
-            py-1
-            rounded
-            font-semibold
-            text-white
-            hover:bg-gray-800
-          "
+          class="mt-2 block px-2 py-1 rounded font-semibold text-white hover:bg-gray-800 sm:mt-0 sm:text-sm sm:font-normal"
         >
           Trips
         </router-link>
         <router-link
           to="#"
-          class="
-            mt-2
-            block
-            px-2
-            py-1
-            rounded
-            font-semibold
-            text-white
-            hover:bg-gray-800
-          "
+          class="mt-2 block px-2 py-1 rounded font-semibold text-white hover:bg-gray-800 sm:mt-0 sm:text-sm sm:font-normal"
         >
           Messages
         </router-link>
       </div>
-      <div class="px-4 py-5">
+      <div class="px-4 py-5 sm:py-0">
         <div class="flex items-center">
           <img
-            class="h-10 w-10 object-cover rounded-full border-2 border-gray-600"
+            class="h-10 w-10 object-cover rounded-full border-2 border-gray-600 sm:h-8 sm:w-8"
             src="https://pbs.twimg.com/profile_images/1345141426347192321/BGckg2a1_400x400.jpg"
             alt="Profile"
           />
-          <span class="ml-3 font-semibold text-gray-200">Benn Ajax</span>
+          <span class="ml-3 font-semibold text-gray-200 sm:hidden">Benn Ajax</span>
         </div>
-        <div class="mt-5">
-          <router-link to="#" class="block text-gray-400 hover:text-white"
-            >Account Settings</router-link
-          >
-          <router-link to="#" class="mt-3 block text-gray-400 hover:text-white"
-            >Support</router-link
-          >
-          <router-link to="#" class="mt-3 block text-gray-400 hover:text-white"
-            >Sign out</router-link
-          >
+        <div class="mt-5 sm:hidden">
+          <router-link to="#" class="block text-gray-400 hover:text-white">Account Settings</router-link>
+          <router-link to="#" class="mt-3 block text-gray-400 hover:text-white">Support</router-link>
+          <router-link to="#" class="mt-3 block text-gray-400 hover:text-white">Sign out</router-link>
         </div>
       </div>
     </nav>

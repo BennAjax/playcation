@@ -1,13 +1,9 @@
 <template>
   <section class="bg-gray-800">
     <div class="flex justify-between px-4 py-2">
-      <div class="relative">
+      <div class="relative max-w-xs w-full">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3">
-          <svg
-            class="w-6 h-6 fill-current text-gray-500"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
+          <svg class="w-6 h-6 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
@@ -18,6 +14,8 @@
         </div>
         <input
           class="
+            block
+            w-full
             bg-gray-900
             focus:outline-none
             focus:bg-white
@@ -41,6 +39,7 @@
           bg-gray-700
           rounded-lg
           shadow
+          ml-2
           pl-3
           pr-4
           hover:bg-gray-600
@@ -48,158 +47,96 @@
           focus:text-gray-900
         "
       >
-        <svg
-          class="fill-current text-gray-400"
-          width="18"
-          height="14"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg class="fill-current text-gray-400" width="18" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
-            d="M0 1a1 1 0 011-1h16a1 1 0 110 2H1a1 1 0 01-1-1zm3 6a1 1 0 011-1h10a1 1 0 110 2H4a1 1 0 01-1-1zm4 5a1 1 0 100 2h4a1 1 0 100-2H7z"
+            d="M0 1a1 1 0 011-1h16a1 1 0 110 2H1a1 1 0 01-1-1zm3 6a1 1 0 011-1h10a1 1 0 110 2H4a1 1 0 01-1-1zm4 5a1 1
+             0 100 2h4a1 1 0 100-2H7z"
           />
         </svg>
         <span class="ml-1 text-white font-medium">Filters</span>
       </button>
     </div>
     <form v-show="isOpen">
-      <fieldset
-        class="px-4 py-4 border-t border-gray-900 sm:flex sm:items-center sm:-mx-2"
-      >
+      <fieldset class="px-4 py-4 border-t border-gray-900 sm:flex sm:items-center sm:-mx-2">
         <div class="flex -mx-2 sm:w-1/2 sm:mx-0">
           <label class="block w-1/2 px-2">
             <span class="text-sm font-semibold text-gray-400">Bedrooms</span>
-            <select
-              class="mt-1 block w-full border-transparent rounded-lg bg-gray-700 text-white shadow"
-            >
+            <select class="mt-1 block w-full border-transparent rounded-lg bg-gray-700 text-white shadow">
               <option>4</option>
               <option>5</option>
             </select>
           </label>
           <label class="block w-1/2 px-2">
             <span class="text-sm font-semibold text-gray-400">Bathrooms</span>
-            <select
-              class="mt-1 block w-full border-transparent rounded-lg bg-gray-700 text-white shadow"
-            >
+            <select class="mt-1 block w-full border-transparent rounded-lg bg-gray-700 text-white shadow">
               <option>2</option>
             </select>
           </label>
         </div>
+
         <div class="mt-4 flex sm:w-1/2 sm:mx-0 sm:px-2 sm:mt-0">
           <label class="block w-full">
             <span class="text-sm font-semibold text-gray-400">Price Range</span>
-            <select
-              class="mt-1 block w-full border-transparent rounded-lg bg-gray-700 text-white shadow"
-            >
+            <select class="mt-1 block w-full border-transparent rounded-lg bg-gray-700 text-white shadow">
               <option>Up to $2000/wk</option>
             </select>
           </label>
         </div>
       </fieldset>
-      <fieldset class="px-4 py-4 border-t border-gray-900 ">
-        <span class="block text-sm font-semibold text-gray-400">
-          Property Type
-        </span>
+      <fieldset class="px-4 py-4 border-t border-gray-900">
+        <span class="block text-sm font-semibold text-gray-400"> Property Type </span>
         <div class="sm:flex sm:justify-between sm:w-5/6">
           <label class="mt-3 flex items-center">
-            <input
-              class="bg-gray-900 border-transparent text-indigo-500"
-              type="radio"
-              name="propertyType"
-              value="house"
-            />
+            <input class="bg-gray-900 border-transparent text-indigo-500" type="radio" name="propertyType" value="house" />
             <span class="ml-2 text-white">House</span>
           </label>
           <label class="mt-3 flex items-center">
-            <input
-              class="bg-gray-900 border-transparent text-indigo-500"
-              type="radio"
-              name="propertyType"
-              value="house"
-            />
+            <input class="bg-gray-900 border-transparent text-indigo-500" type="radio" name="propertyType" value="house" />
             <span class="ml-2 text-white">Apartment</span>
           </label>
           <label class="mt-3 flex items-center">
-            <input
-              class="bg-gray-900 border-transparent text-indigo-500"
-              type="radio"
-              name="propertyType"
-              value="house"
-            />
+            <input class="bg-gray-900 border-transparent text-indigo-500" type="radio" name="propertyType" value="house" />
             <span class="ml-2 text-white">Loft</span>
           </label>
           <label class="mt-3 flex items-center">
-            <input
-              class="bg-gray-900 border-transparent text-indigo-500"
-              type="radio"
-              name="propertyType"
-              value="house"
-            />
+            <input class="bg-gray-900 border-transparent text-indigo-500" type="radio" name="propertyType" value="house" />
             <span class="ml-2 text-white">Townhouse</span>
           </label>
         </div>
       </fieldset>
       <fieldset class="px-4 py-4 border-t border-gray-900">
         <span class="block text-sm font-semibold text-gray-400">Amenities</span>
-        <div class="sm:flex sm:flex-wrap sm:-mx-2 ">
+        <div class="sm:flex sm:flex-wrap sm:-mx-2">
           <label class="mt-3 flex items-center sm:w-1/4 sm:px-2">
-            <input
-              class="bg-gray-900 border-transparent rounded-md text-indigo-500"
-              type="checkbox"
-              name="balcony"
-            />
+            <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="balcony" />
             <span class="ml-2 text-white">Balcony</span>
           </label>
           <label class="mt-3 flex items-center sm:w-1/4 sm:px-2">
-            <input
-              class="bg-gray-900 border-transparent rounded-md text-indigo-500"
-              type="checkbox"
-              name="parking"
-            />
+            <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="parking" />
             <span class="ml-2 text-white">Kid friendly</span>
           </label>
           <label class="mt-3 flex items-center sm:w-1/4 sm:px-2">
-            <input
-              class="bg-gray-900 border-transparent rounded-md text-indigo-500"
-              type="checkbox"
-              name="pool"
-            />
+            <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="pool" />
             <span class="ml-2 text-white">Pool</span>
           </label>
           <label class="mt-3 flex items-center sm:w-1/4 sm:px-2">
-            <input
-              class="bg-gray-900 border-transparent rounded-md text-indigo-500"
-              type="checkbox"
-              name="beach"
-            />
+            <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="beach" />
             <span class="ml-2 text-white">Beach</span>
           </label>
           <label class="mt-3 flex items-center sm:w-1/4 sm:px-2">
-            <input
-              class="bg-gray-900 border-transparent rounded-md text-indigo-500"
-              type="checkbox"
-              name="petFriendly"
-            />
+            <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="petFriendly" />
             <span class="ml-2 text-white">Pet friendly</span>
           </label>
 
           <label class="mt-3 flex items-center sm:w-1/4 sm:px-2">
-            <input
-              class="bg-gray-900 border-transparent rounded-md text-indigo-500"
-              type="checkbox"
-              name="airConditioning"
-            />
+            <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="airConditioning" />
             <span class="ml-2 text-white">Parking</span>
           </label>
 
           <label class="mt-3 flex items-center sm:w-1/4 sm:px-2">
-            <input
-              class="bg-gray-900 border-transparent rounded-md text-indigo-500"
-              type="checkbox"
-              name="airConditioning"
-            />
+            <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="airConditioning" />
             <span class="ml-2 text-white">Air conditioning</span>
           </label>
         </div>
@@ -207,7 +144,20 @@
       <div class="bg-gray-900 px-4 py-4">
         <button
           type="button"
-          class="block w-full bg-indigo-500 hover:bg-indigo-400 font-semibold text-white px-4 py-2 rounded-lg sm:w-auto"
+          class="
+            block
+            w-full
+            bg-indigo-500
+            hover:bg-indigo-400
+            font-semibold
+            text-white
+            px-4
+            py-2
+            rounded-lg
+            sm:w-auto
+            focus:outline-none
+            focus:bg-indigo-500
+          "
         >
           Update results
         </button>
