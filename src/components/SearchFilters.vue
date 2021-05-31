@@ -1,6 +1,6 @@
 <template>
-  <section class="bg-gray-800">
-    <div class="flex justify-between px-4 py-2">
+  <section class="bg-gray-800 xl:w-72">
+    <div class="flex justify-between px-4 py-2 xl:hidden">
       <div class="relative max-w-xs w-full">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3">
           <svg class="w-6 h-6 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -59,9 +59,24 @@
         <span class="ml-1 text-white font-medium">Filters</span>
       </button>
     </div>
-    <form v-show="isOpen">
-      <div class="lg:flex">
-        <fieldset class="px-4 py-4 border-t border-gray-900 sm:flex sm:items-center sm:-mx-2 lg:w-1/3 lg:flex-wrap lg:border-r">
+    <form v-show="isOpen" class="xl:h-full xl:flex xl:flex-col xl:justify-between xl:overflow-y-auto scrollbar scrollbar-thin scrollbar-thumb-indigo-500 scrollbar-track-gray-800">
+      <div class="lg:flex xl:block">
+        <fieldset
+          class="
+            px-4
+            py-4
+            border-t border-gray-900
+            sm:flex
+            sm:items-center
+            sm:-mx-2
+            lg:w-1/3
+            lg:flex-wrap
+            lg:border-r
+            xl:border-0
+            xl:w-full
+            xl:mx-0
+          "
+        >
           <div class="flex -mx-2 sm:w-1/2 sm:mx-0 lg:w-full">
             <label class="block w-1/2 px-2">
               <span class="text-sm font-semibold text-gray-400">Bedrooms</span>
@@ -87,7 +102,7 @@
             </label>
           </div>
         </fieldset>
-        <fieldset class="px-4 py-4 border-t border-gray-900 lg:w-1/3 lg:border-r">
+        <fieldset class="px-4 py-4 border-t border-gray-900 lg:w-1/3 lg:border-r xl:border-r- 0 xl:w-full xl:mx-0">
           <span class="block text-sm font-semibold text-gray-400"> Property Type </span>
           <div class="sm:flex sm:justify-between sm:w-5/6 lg:block">
             <label class="mt-3 flex items-center">
@@ -108,9 +123,9 @@
             </label>
           </div>
         </fieldset>
-        <fieldset class="px-4 py-4 border-t border-gray-900 lg:w-1/3">
+        <fieldset class="px-4 py-4 border-t border-gray-900 lg:w-1/3 xl:w-full xl:mx-0">
           <span class="block text-sm font-semibold text-gray-400">Amenities</span>
-          <div class="sm:flex sm:flex-wrap sm:-mx-2 ">
+          <div class="sm:flex sm:flex-wrap sm:-mx-2 xl:block">
             <label class="mt-3 flex items-center sm:w-1/4 sm:px-2 lg:w-1/2">
               <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="balcony" />
               <span class="ml-2 text-white">Balcony</span>
@@ -137,7 +152,7 @@
               <span class="ml-2 text-white">Parking</span>
             </label>
 
-            <label class="mt-3 flex items-center sm:w-1/4 sm:px-2 lg:w-1/2">
+            <label class="mt-3 flex items-center sm:w-1/4 sm:px-2 lg:w-1/2 xl:w-full">
               <input class="bg-gray-900 border-transparent rounded-md text-indigo-500" type="checkbox" name="airConditioning" />
               <span class="ml-2 text-white">Air conditioning</span>
             </label>
@@ -160,6 +175,7 @@
             sm:w-auto
             focus:outline-none
             focus:bg-indigo-500
+            xl:w-full
           "
         >
           Update results
@@ -174,7 +190,7 @@ export default {
   name: "SearchFilters",
   data: function () {
     return {
-      isOpen: false,
+      isOpen: true,
     };
   },
   methods: {
