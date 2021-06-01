@@ -59,7 +59,16 @@
         <span class="ml-1 text-white font-medium">Filters</span>
       </button>
     </div>
-    <form v-show="isOpen" class="xl:h-full xl:flex xl:flex-col xl:justify-between xl:overflow-y-auto scrollbar scrollbar-thin scrollbar-thumb-indigo-500 scrollbar-track-gray-800">
+    <form
+      v-show="isOpen"
+      class="
+        xl:h-full
+        xl:flex xl:flex-col
+        xl:justify-between
+        xl:overflow-y-auto
+        xl:scrollbar xl:scrollbar-thin xl:scrollbar-thumb-teal-500 xl:scrollbar-track-gray-600
+      "
+    >
       <div class="lg:flex xl:block">
         <fieldset
           class="
@@ -165,7 +174,7 @@
           class="
             block
             w-full
-            bg-indigo-500
+            bg-teal-500
             hover:bg-indigo-400
             font-semibold
             text-white

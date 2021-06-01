@@ -34,11 +34,15 @@ module.exports = {
       },
       backgroundColor: {
         teal: "#EDF2F7",
+        "teal-500": "#667EEA",
+      },
+      colors: {
+        "teal-500": "#667EEA",
       },
     },
   },
   variants: {
-    scrollbar: ["rounded"],
+    scrollbar: ["rounded", "responsive"],
   },
   plugins: [require("@tailwindcss/forms"), require("tailwind-scrollbar")],
 };

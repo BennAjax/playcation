@@ -1,6 +1,6 @@
 <template>
-  <header class="bg-gray-900 sm:flex sm:items-center sm:justify-between">
-    <div class="flex justify-between items-end px-4 py-3">
+  <header class="bg-gray-900 sm:flex sm:items-center sm:justify-between xl:bg-white">
+    <div class="flex justify-between items-end px-4 py-3 xl:w-72 xl:bg-gray-900 xl:justify-center">
       <div>
         <svg class="h-7 w-auto" viewBox="0 0 185 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -19,12 +19,8 @@
           />
         </svg>
       </div>
-      <div class="flex">
-        <button
-          @click="toggle"
-          type="button"
-          class="px-2 text-gray-500 hover:text-white focus:outline-none focus:text-white sm:hidden"
-        >
+      <div class="flex sm:hidden">
+        <button @click="toggle" type="button" class="px-2 text-gray-500 hover:text-white focus:outline-none focus:text-white">
           <svg
             v-if="!isOpen"
             class="h-6 w-6 fill-current text-gray-500"
@@ -48,37 +44,114 @@
         </button>
       </div>
     </div>
-    <nav class="sm:flex sm:items-center sm:mt-1 md:mt-0" :class="{ hidden: !isOpen, block: isOpen }">
-      <div class="px-4 pt-3 pb-5 border-b border-gray-800 sm:flex sm:border-b-0 sm:py-0 sm:pr-0">
-        <router-link to="#" class="block px-2 py-1 rounded font-semibold text-white hover:bg-gray-800 sm:text-sm sm:font-normal">
-          List your property
-        </router-link>
-        <router-link
-          to="#"
-          class="mt-2 block px-2 py-1 rounded font-semibold text-white hover:bg-gray-800 sm:mt-0 sm:text-sm sm:font-normal"
-        >
-          Trips
-        </router-link>
-        <router-link
-          to="#"
-          class="mt-2 block px-2 py-1 rounded font-semibold text-white hover:bg-gray-800 sm:mt-0 sm:text-sm sm:font-normal"
-        >
-          Messages
-        </router-link>
-      </div>
-      <div class="px-4 py-5 sm:py-0">
-        <div class="flex items-center">
-          <img
-            class="h-10 w-10 object-cover rounded-full border-2 border-gray-600 sm:h-8 sm:w-8"
-            src="https://pbs.twimg.com/profile_images/1345141426347192321/BGckg2a1_400x400.jpg"
-            alt="Profile"
+    <nav class="sm:flex sm:items-center sm:mt-1 md:mt-0 xl:flex-1 xl:justify-between" :class="{ hidden: !isOpen, block: isOpen }">
+      <div class="hidden xl:block mx-4 xl:max-w-xl xl:w-full">
+        <div class="relative max-w-xs w-full">
+          <div class="absolute inset-y-0 left-0 flex items-center pl-3 pt-1">
+            <svg class="w-5 h-5 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M14.32 12.906l1.096 1.096c.412-.023.83.123 1.145.437l3 3a1.5 1.5 0 01-2.122 2.122l-3-3a1.497 1.497
+               0 01-.437-1.145l-1.096-1.096a8 8 0 111.414-1.414zM8 14A6 6 0 108 2a6 6 0 000 12z"
+              />
+            </svg>
+          </div>
+          <input
+            class="
+              block
+              w-full
+              bg-teal
+              focus:outline-none
+              focus:bg-gray-200
+              focus:text-gray-500
+              text-gray-900
+              rounded-lg
+              pl-10
+              pr-4
+              pt-1
+              pb-1
+            "
+            placeholder="Search by keywords"
           />
-          <span class="ml-3 font-semibold text-gray-200 sm:hidden">Benn Ajax</span>
         </div>
-        <div class="mt-5 sm:hidden">
-          <router-link to="#" class="block text-gray-400 hover:text-white">Account Settings</router-link>
-          <router-link to="#" class="mt-3 block text-gray-400 hover:text-white">Support</router-link>
-          <router-link to="#" class="mt-3 block text-gray-400 hover:text-white">Sign out</router-link>
+      </div>
+
+      <div class="sm:flex sm:items-center sm:mt-1 md:mt-0">
+        <div class="px-4 pt-3 pb-5 border-b border-gray-800 sm:flex sm:border-b-0 sm:py-0 sm:pr-0">
+          <router-link
+            to="#"
+            class="
+              block
+              px-2
+              py-1
+              rounded
+              font-semibold
+              text-white
+              hover:bg-gray-800
+              sm:text-sm
+              sm:font-normal
+              xl:text-gray-900
+              xl:hover:bg-gray-100
+            "
+          >
+            List your property
+          </router-link>
+          <router-link
+            to="#"
+            class="
+              mt-2
+              block
+              px-2
+              py-1
+              rounded
+              font-semibold
+              text-white
+              hover:bg-gray-800
+              sm:mt-0
+              sm:text-sm
+              sm:font-normal
+              xl:text-gray-900
+              xl:hover:bg-gray-100
+            "
+          >
+            Trips
+          </router-link>
+          <router-link
+            to="#"
+            class="
+              mt-2
+              block
+              px-2
+              py-1
+              rounded
+              font-semibold
+              text-white
+              hover:bg-gray-800
+              sm:mt-0
+              sm:text-sm
+              sm:font-normal
+              xl:text-gray-900
+              xl:hover:bg-gray-100
+            "
+          >
+            Messages
+          </router-link>
+        </div>
+        <div class="px-4 py-5 sm:py-0">
+          <div class="flex items-center">
+            <img
+              class="h-10 w-10 object-cover rounded-full border-2 border-gray-600 sm:h-8 sm:w-8 xl:border-gray-300"
+              src="https://pbs.twimg.com/profile_images/1345141426347192321/BGckg2a1_400x400.jpg"
+              alt="Profile"
+            />
+            <span class="ml-3 font-semibold text-gray-200 sm:hidden">Benn Ajax</span>
+          </div>
+          <div class="mt-5 sm:hidden">
+            <router-link to="#" class="block text-gray-400 hover:text-white">Account Settings</router-link>
+            <router-link to="#" class="mt-3 block text-gray-400 hover:text-white">Support</router-link>
+            <router-link to="#" class="mt-3 block text-gray-400 hover:text-white">Sign out</router-link>
+          </div>
         </div>
       </div>
     </nav>
