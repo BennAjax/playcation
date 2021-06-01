@@ -90,6 +90,8 @@
             <label class="block w-1/2 px-2">
               <span class="text-sm font-semibold text-gray-400">Bedrooms</span>
               <select class="mt-1 block w-full border-transparent rounded-lg bg-gray-700 text-white shadow">
+                <option>2</option>
+                <option>3</option>
                 <option>4</option>
                 <option>5</option>
               </select>
@@ -97,7 +99,9 @@
             <label class="block w-1/2 px-2">
               <span class="text-sm font-semibold text-gray-400">Bathrooms</span>
               <select class="mt-1 block w-full border-transparent rounded-lg bg-gray-700 text-white shadow">
+                <option>1</option>
                 <option>2</option>
+                <option>3</option>
               </select>
             </label>
           </div>
@@ -106,7 +110,10 @@
             <label class="block w-full">
               <span class="text-sm font-semibold text-gray-400">Price Range</span>
               <select class="mt-1 block w-full border-transparent rounded-lg bg-gray-700 text-white shadow">
+                <option>Up to $1500/wk</option>
                 <option>Up to $2000/wk</option>
+                <option>Up to $2500/wk</option>
+                <option>Up to $3000/wk</option>
               </select>
             </label>
           </div>
