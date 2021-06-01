@@ -18,12 +18,7 @@
           >
             <div class="mt-6 sm:max-w-xs sm:w-full sm:flex-shrink-0 sm:px-2" v-for="i in 7" :key="i">
               <div class="relative pb-2/3 rounded-lg shadow-md">
-                <img
-                  class="absolute h-full w-full object-cover rounded-lg shadow-md"
-                  src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdl
-              fHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-                  alt="house"
-                />
+                <img class="absolute h-full w-full object-cover rounded-lg shadow-md" src="../assets/house.jpg" alt="house" />
               </div>
               <div class="relative px-4 -mt-16">
                 <div class="bg-white rounded-lg px-4 py-4 shadow-lg">
@@ -91,12 +86,7 @@
           >
             <div class="mt-6 sm:max-w-xs sm:w-full sm:flex-shrink-0 sm:px-2" v-for="i in 7" :key="i">
               <div class="relative pb-2/3 rounded-lg shadow-md">
-                <img
-                  class="absolute h-full w-full object-cover rounded-lg shadow-md"
-                  src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&ixid=
-                  MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80"
-                  alt="house"
-                />
+                <img class="absolute h-full w-full object-cover rounded-lg shadow-md" src="../assets/house.jpg" alt="house" />
               </div>
               <div class="relative px-4 -mt-16">
                 <div class="bg-white rounded-lg px-4 py-4 shadow-lg">

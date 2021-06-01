@@ -142,7 +142,7 @@
           <div class="flex items-center sm:hidden">
             <img
               class="h-10 w-10 object-cover rounded-full border-2 border-gray-600 sm:h-8 sm:w-8 xl:border-gray-300"
-              src="https://pbs.twimg.com/profile_images/1345141426347192321/BGckg2a1_400x400.jpg"
+              src="../assets/profile.jpg"
               alt="Profile"
             />
             <span class="ml-3 font-semibold text-gray-200">Benn Ajax</span>
@@ -150,7 +150,7 @@
           <button @click="toggleDropDown" class="hidden sm:block focus:outline-none" type="button">
             <img
               class="h-8 w-8 object-cover rounded-full border-2 border-gray-300"
-              src="https://pbs.twimg.com/profile_images/1345141426347192321/BGckg2a1_400x400.jpg"
+              src="../assets/profile.jpg"
               alt="Profile"
             />
           </button>
@@ -208,9 +208,9 @@ export default {
       this.dropDownOpen = false;
     };
     document.addEventListener("keydown", onEscape);
-    this.on("hook:destroyed", () => {
-      document.removeEventListener("keydown", onEscape);
-    });
+    // this.on("hook:destroyed", () => {
+    //   document.removeEventListener("keydown", onEscape);
+    // });
   },
   data: function () {
     return {

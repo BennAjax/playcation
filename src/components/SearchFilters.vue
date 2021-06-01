@@ -204,15 +204,33 @@
 <script>
 export default {
   name: "SearchFilters",
+  mounted() {
+    this.isOpen = window.innerWidth > 1279;
+    this.$nextTick(() => {
+      window.addEventListener("resize", this.onResize);
+    });
+  },
   data: function () {
     return {
-      isOpen: true,
+      isOpen: false,
+      windowWidth: window.innerWidth,
     };
   },
   methods: {
     toggle() {
       this.isOpen = !this.isOpen;
     },
+    onResize() {
+      this.windowWidth = window.innerWidth;
+    },
+  },
+  watch: {
+    windowWidth(newWidth) {
+      this.isOpen = newWidth > 1279;
+    },
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.onResize);
   },
 };
 </script>

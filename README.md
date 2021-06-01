@@ -1,4 +1,8 @@
-# playcation
+# Playcation
+A fictitious home booking website built with tailwind and vueJs. 
+This project is to showcase building complex UI's with Tailwind CSS 
+and its for educational purposes only. A live demo could be found at
+https://playcation.herokuapp.com/
 
 ## Project setup
 ```
@@ -20,5 +24,3 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
