@@ -138,19 +138,59 @@
             Messages
           </router-link>
         </div>
-        <div class="px-4 py-5 sm:py-0">
-          <div class="flex items-center">
+        <div class="relative px-4 py-5 sm:py-0">
+          <div class="flex items-center sm:hidden">
             <img
               class="h-10 w-10 object-cover rounded-full border-2 border-gray-600 sm:h-8 sm:w-8 xl:border-gray-300"
               src="https://pbs.twimg.com/profile_images/1345141426347192321/BGckg2a1_400x400.jpg"
               alt="Profile"
             />
-            <span class="ml-3 font-semibold text-gray-200 sm:hidden">Benn Ajax</span>
+            <span class="ml-3 font-semibold text-gray-200">Benn Ajax</span>
           </div>
-          <div class="mt-5 sm:hidden">
-            <router-link to="#" class="block text-gray-400 hover:text-white">Account Settings</router-link>
-            <router-link to="#" class="mt-3 block text-gray-400 hover:text-white">Support</router-link>
-            <router-link to="#" class="mt-3 block text-gray-400 hover:text-white">Sign out</router-link>
+          <button @click="toggleDropDown" class="hidden sm:block focus:outline-none" type="button">
+            <img
+              class="h-8 w-8 object-cover rounded-full border-2 border-gray-300"
+              src="https://pbs.twimg.com/profile_images/1345141426347192321/BGckg2a1_400x400.jpg"
+              alt="Profile"
+            />
+          </button>
+          <div :class="dropDownOpen ? 'sm:block' : 'sm:hidden'">
+            <button
+              @click="dropDownOpen = false"
+              type="button"
+              class="hidden sm:block sm:fixed sm:opacity-0 sm:inset-0 sm:cursor-default sm:w-full sm:h-full sm:z-10"
+            ></button>
+            <div
+              class="
+                mt-5
+                sm:bg-white
+                sm:rounded-lg
+                sm:absolute
+                sm:right-4
+                sm:mt-3
+                sm:w-48
+                sm:shadow-xl
+                sm:py-1
+                sm:text-sm
+                sm:z-10
+              "
+            >
+              <router-link
+                to="#"
+                class="block text-gray-400 hover:text-white sm:text-gray-800 sm:mt-0 sm:px-4 sm:py-1 sm:hover:bg-teal-500"
+                >Account Settings</router-link
+              >
+              <router-link
+                to="#"
+                class="mt-3 block text-gray-400 hover:text-white sm:text-gray-800 sm:mt-0 sm:px-4 sm:py-1 sm:hover:bg-teal-500"
+                >Support</router-link
+              >
+              <router-link
+                to="#"
+                class="mt-3 block text-gray-400 hover:text-white sm:text-gray-800 sm:mt-0 sm:px-4 sm:py-1 sm:hover:bg-teal-500"
+                >Sign out</router-link
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -160,14 +200,30 @@
 <script>
 export default {
   name: "SiteHeader",
+  mounted() {
+    const onEscape = (e) => {
+      if (!this.dropDownOpen || e.key !== "Escape") {
+        return;
+      }
+      this.dropDownOpen = false;
+    };
+    document.addEventListener("keydown", onEscape);
+    this.on("hook:destroyed", () => {
+      document.removeEventListener("keydown", onEscape);
+    });
+  },
   data: function () {
     return {
       isOpen: false,
+      dropDownOpen: false,
     };
   },
   methods: {
     toggle() {
       this.isOpen = !this.isOpen;
+    },
+    toggleDropDown() {
+      this.dropDownOpen = !this.dropDownOpen;
     },
   },
 };
